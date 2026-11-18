@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="sv">
 <head>
-	<title>Adam Abrahamsson | Mixer &amp; Dist Studios</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Songs by Dist Studios</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
 
@@ -46,42 +46,16 @@
 			justify-content: center;
 			align-items: center;
 			text-align: center;
-			padding: 3rem 1.5rem;
+			padding: 2rem 1.5rem;
 		}
 
 		h1 {
-			font-size: clamp(2.2rem, 5vw, 3.8rem);
-			font-weight: 600;
-			letter-spacing: 0.03em;
-			margin-bottom: 0.8rem;
-			text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-		}
-
-		p {
-			font-size: clamp(1rem, 1.8vw, 1.25rem);
-			font-weight: 300;
-			color: rgba(255, 255, 255, 0.9);
-			max-width: 680px;
-			line-height: 1.6;
-			margin-bottom: 1.5rem;
-			text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-		}
-
-		hr {
-			width: 100%;
-			max-width: 240px;
-			border: 0;
-			border-top: 1px solid rgba(255, 255, 255, 0.35);
-			margin: 0.8rem auto 1.5rem auto;
-		}
-
-		h2 {
-			font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+			font-size: clamp(1.5rem, 3vw, 2.2rem);
 			font-weight: 400;
-			letter-spacing: 0.08em;
+			letter-spacing: 0.1em;
 			text-transform: uppercase;
-			color: rgba(255, 255, 255, 0.85);
-			margin-bottom: 1rem;
+			color: rgba(255, 255, 255, 0.9);
+			margin-bottom: 1.5rem;
 			text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 		}
 
@@ -89,7 +63,6 @@
 		.spotify-container {
 			width: 100%;
 			max-width: 400px;
-			margin-top: 0.5rem;
 			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 			border-radius: 12px;
 			overflow: hidden;
@@ -97,29 +70,17 @@
 	</style>
 </head>
 <body>
-	<div class="background-image" aria-hidden="true"></div>
+
+	<div class="background-image"></div>
 
 	<main class="content">
-		<h1>Hi, my name is Adam Abrahamsson!</h1>
-		<p>I’m a professional mixer and a part of Dist Studios, based in Stockholm, Sweden. I’m mainly focused on band-oriented mixing. Recorded drums, guitars and other instruments, but I also have a long history of pop and EDM mixing as well. Whether you want a dirty indie rock mix or a clean modern metal mix, I’ve done it all.</p>
-
-		<hr>
-
-		<h2>My Mixes</h2>
-
+		<h1>Songs by Dist Studios</h1>
+		
+		<!-- Spotify-spelare -->
 		<div class="spotify-container">
-			<iframe
-				title="Spotify playlist of Adam Abrahamsson's mixes"
-				style="border-radius:12px"
-				src="https://open.spotify.com/embed/playlist/16t9BBq8vsYZjPPbXMTUcy"
-				width="100%"
-				height="352"
-				frameborder="0"
-				allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-				allowfullscreen
-				loading="lazy">
-			</iframe>
+			<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5SUMZ0GDupjDi8vqt2UYIe?utm_source=generator&si=b024c03504ec4ea7" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		</div>
 	</main>
+
 </body>
 </html>
