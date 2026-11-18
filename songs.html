@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="sv">
+<head>
+  <title>Songs by Dist Studios</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: 'Source Sans 3', sans-serif;
+      background-color: #14110f;
+      color: #fff;
+    }
+
+    .background-image {
+      position: fixed;
+      inset: -20px;
+      background-image: url('pexels-rdne-8198567.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px) brightness(0.40);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .spotify-container {
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .back-link {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="background-image" aria-hidden="true"></div>
+  <main class="content">
+    <a class="back-link" href="./">← Dist Studios</a>
+    <h1>Songs by Dist Studios</h1>
+    <div class="spotify-container">
+      <iframe
+        title="Spotify playlist of songs by Dist Studios"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/5SUMZ0GDupjDi8vqt2UYIe?utm_source=generator&amp;si=b024c03504ec4ea7"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </main>
+</body>
+</html>

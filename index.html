@@ -63,11 +63,9 @@
     }
 
     .tab:hover,
-    .tab[aria-current="page"],
-    .tab[aria-pressed="true"] { color: #fff; }
+    .tab[aria-current="page"] { color: #fff; }
 
-    .tab[aria-current="page"]::after,
-    .tab[aria-pressed="true"]::after {
+    .tab[aria-current="page"]::after {
       position: absolute;
       right: 0;
       bottom: -1px;
@@ -83,20 +81,6 @@
       border-radius: 3px;
     }
 
-    .panel {
-      min-height: 100px;
-      padding: 2rem 1rem;
-      color: #aaa59d;
-    }
-
-    .panel h2 {
-      margin: 0;
-      color: #f5f3ef;
-      font-size: 1.25rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-    }
-
     @media (max-width: 420px) {
       .tab { min-width: 0; flex: 1; }
     }
@@ -107,24 +91,9 @@
     <h1>Dist Studios</h1>
 
     <nav class="tabs" aria-label="Dist Studios sections">
-      <a class="tab" href="./mixing.html" aria-current="page">Mixing</a>
-      <button class="tab" id="songs-tab" type="button" aria-pressed="false" aria-controls="songs-panel">Songs</button>
+      <a class="tab" href="./mixing.html">Mixing</a>
+      <a class="tab" href="./songs.html">Songs</a>
     </nav>
-
-    <section class="panel" id="songs-panel" hidden>
-      <h2>Songs</h2>
-    </section>
   </main>
-
-  <script>
-    const songsTab = document.getElementById('songs-tab');
-    const songsPanel = document.getElementById('songs-panel');
-
-    songsTab.addEventListener('click', () => {
-      const showingSongs = songsTab.getAttribute('aria-pressed') !== 'true';
-      songsTab.setAttribute('aria-pressed', String(showingSongs));
-      songsPanel.hidden = !showingSongs;
-    });
-  </script>
 </body>
 </html>
