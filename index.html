@@ -1,125 +1,147 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-	<title>Adam Abrahamsson | Mixer &amp; Dist Studios</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>Dist Studios</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #111;
+      color: #f5f3ef;
+    }
 
-		* {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
+    * { box-sizing: border-box; }
 
-		html, body {
-			height: 100%;
-			width: 100%;
-			overflow-x: hidden;
-			font-family: 'Source Sans 3', sans-serif;
-			background-color: #14110f;
-			color: #ffffff;
-		}
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 2rem 1.25rem;
+      background: radial-gradient(ellipse at 50% 35%, #29251f 0, #171614 42%, #111 78%);
+    }
 
-		/* Bakgrundsbild med suddighet */
-		.background-image {
-			position: fixed;
-			top: -20px;
-			left: -20px;
-			right: -20px;
-			bottom: -20px;
-			background-image: url('pexels-rdne-8198567.jpg');
-			background-size: cover;
-			background-position: center;
-			filter: blur(8px) brightness(0.40);
-			z-index: 1;
-		}
+    main {
+      width: min(100%, 680px);
+      text-align: center;
+    }
 
-		/* Centrerat innehåll */
-		.content {
-			position: relative;
-			z-index: 2;
-			min-height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			padding: 3rem 1.5rem;
-		}
+    h1 {
+      margin: 0 0 2.5rem;
+      font-size: clamp(2.8rem, 9vw, 5.5rem);
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: 0.045em;
+    }
 
-		h1 {
-			font-size: clamp(2.2rem, 5vw, 3.8rem);
-			font-weight: 600;
-			letter-spacing: 0.03em;
-			margin-bottom: 0.8rem;
-			text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-		}
+    [role="tablist"] {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid #49443c;
+    }
 
-		p {
-			font-size: clamp(1rem, 1.8vw, 1.25rem);
-			font-weight: 300;
-			color: rgba(255, 255, 255, 0.9);
-			max-width: 680px;
-			line-height: 1.6;
-			margin-bottom: 1.5rem;
-			text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-		}
+    [role="tab"] {
+      position: relative;
+      min-width: 130px;
+      padding: 0.9rem 1.25rem 1rem;
+      border: 0;
+      background: transparent;
+      color: #aaa59d;
+      font: inherit;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 160ms ease;
+    }
 
-		hr {
-			width: 100%;
-			max-width: 240px;
-			border: 0;
-			border-top: 1px solid rgba(255, 255, 255, 0.35);
-			margin: 0.8rem auto 1.5rem auto;
-		}
+    [role="tab"]:hover,
+    [role="tab"][aria-selected="true"] { color: #fff; }
 
-		h2 {
-			font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-			font-weight: 400;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-			color: rgba(255, 255, 255, 0.85);
-			margin-bottom: 1rem;
-			text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-		}
+    [role="tab"][aria-selected="true"]::after {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      background: #c9a879;
+      content: "";
+    }
 
-		/* Spotify-spelare behållare */
-		.spotify-container {
-			width: 100%;
-			max-width: 400px;
-			margin-top: 0.5rem;
-			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-			border-radius: 12px;
-			overflow: hidden;
-		}
-	</style>
+    [role="tab"]:focus-visible {
+      outline: 2px solid #c9a879;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    [role="tabpanel"] {
+      min-height: 100px;
+      padding: 2rem 1rem;
+      color: #aaa59d;
+    }
+
+    [role="tabpanel"] h2 {
+      margin: 0;
+      color: #f5f3ef;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 420px) {
+      [role="tab"] { min-width: 0; flex: 1; }
+    }
+  </style>
 </head>
 <body>
-	<div class="background-image" aria-hidden="true"></div>
+  <main>
+    <h1>Dist Studios</h1>
 
-	<main class="content">
-		<h1>Hi, my name is Adam Abrahamsson!</h1>
-		<p>I’m a professional mixer and a part of Dist Studios, based in Stockholm, Sweden. I’m mainly focused on band-oriented mixing. Recorded drums, guitars and other instruments, but I also have a long history of pop and EDM mixing as well. Whether you want a dirty indie rock mix or a clean modern metal mix, I’ve done it all.</p>
+    <div role="tablist" aria-label="Dist Studios sections">
+      <button id="mixing-tab" type="button" role="tab" aria-selected="true" aria-controls="mixing-panel" tabindex="0">Mixing</button>
+      <button id="songs-tab" type="button" role="tab" aria-selected="false" aria-controls="songs-panel" tabindex="-1">Songs</button>
+    </div>
 
-		<hr>
+    <section id="mixing-panel" role="tabpanel" aria-labelledby="mixing-tab">
+      <h2>Mixing</h2>
+    </section>
+    <section id="songs-panel" role="tabpanel" aria-labelledby="songs-tab" hidden>
+      <h2>Songs</h2>
+    </section>
+  </main>
 
-		<h2>My Mixes</h2>
+  <script>
+    const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 
-		<div class="spotify-container">
-			<iframe
-				title="Spotify playlist of Adam Abrahamsson's mixes"
-				style="border-radius:12px"
-				src="https://open.spotify.com/embed/playlist/16t9BBq8vsYZjPPbXMTUcy"
-				width="100%"
-				height="352"
-				frameborder="0"
-				allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-				allowfullscreen
-				loading="lazy">
-			</iframe>
-		</div>
-	</main>
+    function activateTab(tab, moveFocus = false) {
+      tabs.forEach((item) => {
+        const selected = item === tab;
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+        document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
+      });
+      if (moveFocus) tab.focus();
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        let nextIndex;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+        if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+        if (event.key === 'Home') nextIndex = 0;
+        if (event.key === 'End') nextIndex = tabs.length - 1;
+        if (nextIndex !== undefined) {
+          event.preventDefault();
+          activateTab(tabs[nextIndex], true);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
