@@ -38,15 +38,16 @@
       letter-spacing: 0.045em;
     }
 
-    [role="tablist"] {
+    .tabs {
       display: flex;
       justify-content: center;
       gap: 0.75rem;
       border-bottom: 1px solid #49443c;
     }
 
-    [role="tab"] {
+    .tab {
       position: relative;
+      display: inline-block;
       min-width: 130px;
       padding: 0.9rem 1.25rem 1rem;
       border: 0;
@@ -56,14 +57,17 @@
       font-size: 1rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      text-decoration: none;
       cursor: pointer;
       transition: color 160ms ease;
     }
 
-    [role="tab"]:hover,
-    [role="tab"][aria-selected="true"] { color: #fff; }
+    .tab:hover,
+    .tab[aria-current="page"],
+    .tab[aria-pressed="true"] { color: #fff; }
 
-    [role="tab"][aria-selected="true"]::after {
+    .tab[aria-current="page"]::after,
+    .tab[aria-pressed="true"]::after {
       position: absolute;
       right: 0;
       bottom: -1px;
@@ -73,19 +77,19 @@
       content: "";
     }
 
-    [role="tab"]:focus-visible {
+    .tab:focus-visible {
       outline: 2px solid #c9a879;
       outline-offset: 3px;
       border-radius: 3px;
     }
 
-    [role="tabpanel"] {
+    .panel {
       min-height: 100px;
       padding: 2rem 1rem;
       color: #aaa59d;
     }
 
-    [role="tabpanel"] h2 {
+    .panel h2 {
       margin: 0;
       color: #f5f3ef;
       font-size: 1.25rem;
@@ -94,7 +98,7 @@
     }
 
     @media (max-width: 420px) {
-      [role="tab"] { min-width: 0; flex: 1; }
+      .tab { min-width: 0; flex: 1; }
     }
   </style>
 </head>
@@ -102,45 +106,24 @@
   <main>
     <h1>Dist Studios</h1>
 
-    <div role="tablist" aria-label="Dist Studios sections">
-      <button id="mixing-tab" type="button" role="tab" aria-selected="true" aria-controls="mixing-panel" tabindex="0">Mixing</button>
-      <button id="songs-tab" type="button" role="tab" aria-selected="false" aria-controls="songs-panel" tabindex="-1">Songs</button>
-    </div>
+    <nav class="tabs" aria-label="Dist Studios sections">
+      <a class="tab" href="./mixing.html" aria-current="page">Mixing</a>
+      <button class="tab" id="songs-tab" type="button" aria-pressed="false" aria-controls="songs-panel">Songs</button>
+    </nav>
 
-    <section id="mixing-panel" role="tabpanel" aria-labelledby="mixing-tab">
-      <h2>Mixing</h2>
-    </section>
-    <section id="songs-panel" role="tabpanel" aria-labelledby="songs-tab" hidden>
+    <section class="panel" id="songs-panel" hidden>
       <h2>Songs</h2>
     </section>
   </main>
 
   <script>
-    const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+    const songsTab = document.getElementById('songs-tab');
+    const songsPanel = document.getElementById('songs-panel');
 
-    function activateTab(tab, moveFocus = false) {
-      tabs.forEach((item) => {
-        const selected = item === tab;
-        item.setAttribute('aria-selected', String(selected));
-        item.tabIndex = selected ? 0 : -1;
-        document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
-      });
-      if (moveFocus) tab.focus();
-    }
-
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => activateTab(tab));
-      tab.addEventListener('keydown', (event) => {
-        let nextIndex;
-        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
-        if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
-        if (event.key === 'Home') nextIndex = 0;
-        if (event.key === 'End') nextIndex = tabs.length - 1;
-        if (nextIndex !== undefined) {
-          event.preventDefault();
-          activateTab(tabs[nextIndex], true);
-        }
-      });
+    songsTab.addEventListener('click', () => {
+      const showingSongs = songsTab.getAttribute('aria-pressed') !== 'true';
+      songsTab.setAttribute('aria-pressed', String(showingSongs));
+      songsPanel.hidden = !showingSongs;
     });
   </script>
 </body>
