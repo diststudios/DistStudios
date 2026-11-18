@@ -6,91 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      min-height: 100%;
-      width: 100%;
-      overflow-x: hidden;
-      font-family: 'Source Sans 3', sans-serif;
-      background-color: #14110f;
-      color: #fff;
-    }
-
-    .background-image {
-      position: fixed;
-      inset: -20px;
-      background-image: url('pexels-rdne-8198567.jpg');
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px) brightness(0.40);
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 3rem 1.5rem;
-    }
-
-    h1 {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 1.5rem;
-      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .spotify-container {
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .back-link {
-      position: absolute;
-      top: 1.5rem;
-      left: 1.5rem;
-      color: #fff;
-      text-decoration: none;
-      letter-spacing: 0.06em;
-    }
-
-    .back-link:hover { text-decoration: underline; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; width: 100%; overflow-x: hidden; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; color: #fff; }
+    .background-image { position: fixed; inset: -20px; background-image: url('pexels-rdne-8198567.jpg'); background-size: cover; background-position: center; filter: blur(8px) brightness(0.40); z-index: 1; }
+    .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; padding: 1rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
+    .brand { display: inline-block; margin: 0 0 0.55rem; color: #fff; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.1; font-weight: 600; letter-spacing: 0.045em; text-decoration: none; }
+    .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); }
+    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
+    .tab:hover, .tab[aria-current="page"] { color: #fff; }
+    .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
+    .tab:focus-visible { outline: 2px solid #c9a879; outline-offset: 2px; }
+    .content { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 1.5rem 3rem; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+    .spotify-container { width: 100%; max-width: 400px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; }
+    @media (max-width: 500px) { .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
   </style>
 </head>
 <body>
   <div class="background-image" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./">Dist Studios</a>
+    <nav class="tabs" aria-label="Dist Studios sections">
+      <a class="tab" href="./mixing.html">Mixing</a>
+      <a class="tab" href="./songs.html" aria-current="page">Songs</a>
+      <a class="tab" href="./about.html">About</a>
+    </nav>
+  </header>
   <main class="content">
-    <a class="back-link" href="./">← Dist Studios</a>
-    <h1>Songs by Dist Studios</h1>
+    <h2>Songs by Dist Studios</h2>
     <div class="spotify-container">
-      <iframe
-        title="Spotify playlist of songs by Dist Studios"
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/playlist/5SUMZ0GDupjDi8vqt2UYIe?utm_source=generator&amp;si=b024c03504ec4ea7"
-        width="100%"
-        height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+      <iframe title="Spotify playlist of songs by Dist Studios" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5SUMZ0GDupjDi8vqt2UYIe?utm_source=generator&amp;si=b024c03504ec4ea7" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
     </div>
   </main>
 </body>

@@ -3,98 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
+  <meta name="theme-color" content="#14110f">
   <title>Dist Studios</title>
   <style>
-    :root {
-      color-scheme: dark;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #111;
-      color: #f5f3ef;
-    }
-
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
     * { box-sizing: border-box; }
-
-    body {
-      min-width: 320px;
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 2rem 1.25rem;
-      background: radial-gradient(ellipse at 50% 35%, #29251f 0, #171614 42%, #111 78%);
-    }
-
-    main {
-      width: min(100%, 680px);
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0 0 2.5rem;
-      font-size: clamp(2.8rem, 9vw, 5.5rem);
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: 0.045em;
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
-      border-bottom: 1px solid #49443c;
-    }
-
-    .tab {
-      position: relative;
-      display: inline-block;
-      min-width: 130px;
-      padding: 0.9rem 1.25rem 1rem;
-      border: 0;
-      background: transparent;
-      color: #aaa59d;
-      font: inherit;
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 160ms ease;
-    }
-
-    .tab:hover,
-    .tab[aria-current="page"] { color: #fff; }
-
-    .tab[aria-current="page"]::after {
-      position: absolute;
-      right: 0;
-      bottom: -1px;
-      left: 0;
-      height: 2px;
-      background: #c9a879;
-      content: "";
-    }
-
-    .tab:focus-visible {
-      outline: 2px solid #c9a879;
-      outline-offset: 3px;
-      border-radius: 3px;
-    }
-
-    @media (max-width: 420px) {
-      .tab { min-width: 0; flex: 1; }
-    }
+    html, body { min-width: 320px; min-height: 100%; margin: 0; }
+    body { min-height: 100vh; color: #fff; font-family: 'Source Sans 3', sans-serif; background: radial-gradient(ellipse at 50% 35%, #29251f 0, #171614 42%, #111 78%); }
+    .site-header { position: relative; z-index: 3; width: 100%; padding: 1.15rem 1rem 0; text-align: center; }
+    .brand { margin: 0 0 0.6rem; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.1; font-weight: 600; letter-spacing: 0.045em; }
+    .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid #49443c; }
+    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: #aaa59d; font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color 160ms ease; }
+    .tab:hover, .tab[aria-current="page"] { color: #fff; }
+    .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
+    .tab:focus-visible { outline: 2px solid #c9a879; outline-offset: 3px; border-radius: 3px; }
+    @media (max-width: 500px) { .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Dist Studios</h1>
-
+  <header class="site-header">
+    <h1 class="brand">Dist Studios</h1>
     <nav class="tabs" aria-label="Dist Studios sections">
       <a class="tab" href="./mixing.html">Mixing</a>
       <a class="tab" href="./songs.html">Songs</a>
       <a class="tab" href="./about.html">About</a>
     </nav>
-  </main>
+  </header>
 </body>
 </html>

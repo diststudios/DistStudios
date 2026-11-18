@@ -9,13 +9,14 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { min-height: 100%; width: 100%; overflow-x: hidden; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; color: #fff; }
     .background-image { position: fixed; inset: -20px; background-image: url('pexels-rdne-8198567.jpg'); background-size: cover; background-position: center; filter: blur(8px) brightness(0.40); z-index: 1; }
-    .tabs { position: fixed; z-index: 3; top: 0; right: 0; left: 0; display: flex; justify-content: center; gap: 0.75rem; padding: 0 1rem; border-bottom: 1px solid rgba(255,255,255,0.25); background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
-    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.85rem 1rem 0.9rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
+    .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; padding: 1rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
+    .brand { display: inline-block; margin: 0 0 0.55rem; color: #fff; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.1; font-weight: 600; letter-spacing: 0.045em; text-decoration: none; }
+    .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); }
+    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
     .tab:hover, .tab[aria-current="page"] { color: #fff; }
     .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
     .tab:focus-visible { outline: 2px solid #c9a879; outline-offset: 2px; }
-    .content { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 6rem 1.5rem 3rem; }
-    h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 0.8rem; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+    .content { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 1.5rem 3rem; }
     p { font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 300; color: rgba(255,255,255,0.9); max-width: 680px; line-height: 1.6; margin-bottom: 1.5rem; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
     hr { width: 100%; max-width: 240px; border: 0; border-top: 1px solid rgba(255,255,255,0.35); margin: 0.8rem auto 1.5rem; }
     h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1rem; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
@@ -25,11 +26,14 @@
 </head>
 <body>
   <div class="background-image" aria-hidden="true"></div>
-  <nav class="tabs" aria-label="Dist Studios sections">
-    <a class="tab" href="./mixing.html" aria-current="page">Mixing</a>
-    <a class="tab" href="./songs.html">Songs</a>
-    <a class="tab" href="./about.html">About</a>
-  </nav>
+  <header class="site-header">
+    <a class="brand" href="./">Dist Studios</a>
+    <nav class="tabs" aria-label="Dist Studios sections">
+      <a class="tab" href="./mixing.html" aria-current="page">Mixing</a>
+      <a class="tab" href="./songs.html">Songs</a>
+      <a class="tab" href="./about.html">About</a>
+    </nav>
+  </header>
   <main class="content">
     <p>My name is Adam and I’m a professional mixing engineer and a part of Dist Studios. I’m mainly focused on band oriented mixing. Recorded drums, guitars and other instruments. I also have a long history of mixing Pop and EDM. So whether you want a dirty Indie Rock mix or a clean Modern Metal mix I’ve done it all.</p>
     <hr>
