@@ -8,9 +8,9 @@
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { min-height: 100%; width: 100%; overflow-x: hidden; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; color: #fff; }
-    .background-image { position: fixed; inset: 0; background-image: url('./assets:studio-background.jpg.HEIC'); background-size: cover; background-position: center; z-index: 1; }
+    .background-image { position: fixed; inset: -8px; background-image: url('./assets:studio-background.jpg.HEIC'); background-size: cover; background-position: center; filter: blur(4px); z-index: 1; }
     .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; padding: 1rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
-    .brand { margin: 0 0 0.55rem; color: #fff; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.1; font-weight: 600; letter-spacing: 0.045em; text-decoration: none; }
+    .brand { display: inline-block; margin: 0 0 0.55rem; color: #fff; font-size: clamp(1.45rem, 3.2vw, 2rem); line-height: 1.1; font-weight: 600; letter-spacing: 0.045em; text-decoration: none; }
     .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); }
     .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
     .tab:hover, .tab[aria-current="page"] { color: #fff; }
