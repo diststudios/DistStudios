@@ -21,9 +21,9 @@
     .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
     .tab:focus-visible { outline: 2px solid #c9a879; outline-offset: 2px; }
     .content { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 1.5rem 3rem; }
+    h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1.25rem; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
     p { font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 300; color: rgba(255,255,255,0.9); max-width: 680px; line-height: 1.6; margin-bottom: 1.5rem; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
     hr { width: 100%; max-width: 240px; border: 0; border-top: 1px solid rgba(255,255,255,0.35); margin: 0.8rem auto 1.5rem; }
-    h2 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1rem; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
     .spotify-container { width: 100%; max-width: 400px; margin-top: 0.5rem; box-shadow: 0 8px 24px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; }
     @media (max-width: 500px) { .site-header { padding-inline: 0.5rem; } .brand { font-size: 1.2rem; } .instagram-link { top: 1.25rem; right: 0.65rem; } .instagram-link svg { width: 21px; height: 21px; } .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
   </style>
@@ -42,6 +42,7 @@
     </nav>
   </header>
   <main class="content">
+    <h2>Mixing</h2>
     <p>I’m Adam, a professional mixing engineer at Dist Studios. I specialize in band-oriented mixing—working with recorded drums, guitars, and live instruments—alongside a strong background in pop and EDM. Whether you’re after a dirty indie rock sound, clean pop or a modern metal mix, I’ve done it all.</p>
     <hr>
     <div class="spotify-container">
