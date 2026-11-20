@@ -12,9 +12,9 @@
     body { min-height: 100vh; color: #fff; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; }
     .background-image { position: fixed; inset: 0; background-image: url('./Dist%20Main.jpg'); background-size: cover; background-position: center; z-index: -1; }
     .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; width: 100%; padding: 1.25rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
-    .brand { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Monoton', cursive; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: 0.15em; text-decoration: none; text-shadow: 0 2px 10px rgba(0,0,0,0.7); }
+    .brand { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Monoton', cursive; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: 0.15em; text-decoration: none; white-space: nowrap; }
     .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); padding-top: 2.25rem; }
-    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; }
+    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: color 160ms ease; }
     .tab:hover, .tab[aria-current="page"] { color: #fff; }
     .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
     .tab:focus-visible { outline: 2px solid #c9a879; outline-offset: 3px; border-radius: 3px; }
@@ -26,7 +26,7 @@
     .spotify-card:focus-visible { outline: 3px solid #c9a879; outline-offset: 4px; }
     .spotify-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
     @media (max-width: 800px) { .spotify-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; margin: 0 auto; } }
-    @media (max-width: 500px) { .site-header { padding-inline: 0.5rem; } .brand { font-size: 1.2rem; } .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
+    @media (max-width: 500px) { .site-header { padding-inline: 0.5rem; } .brand { font-size: 1.2rem; } .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } .hero { padding-inline: 1rem; } }
     @media (prefers-reduced-motion: reduce) { .spotify-card { transition: none; } }
   </style>
 </head>
@@ -55,6 +55,14 @@
         <a class="spotify-card" href="https://open.spotify.com/track/2VvYf4OJSTI5BZeVK00qTi" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="2VvYf4OJSTI5BZeVK00qTi"></a>
         <a class="spotify-card" href="https://open.spotify.com/track/7FYKTqeJAYe119Kh6NJuNw" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="7FYKTqeJAYe119Kh6NJuNw"></a>
         <a class="spotify-card" href="https://open.spotify.com/track/7dFXWf9HmHs1gwJtEPR6AT" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="7dFXWf9HmHs1gwJtEPR6AT"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/38hIrRvybfGE0Rd64v2z5e" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="38hIrRvybfGE0Rd64v2z5e"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/0uEDWvP6RQbkzZrzJrAey9" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="0uEDWvP6RQbkzZrzJrAey9"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/42NqejaZKgbJMTtJdb44Ff" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="42NqejaZKgbJMTtJdb44Ff"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/2klTLEqlhh3OYIurHjIgdi" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="2klTLEqlhh3OYIurHjIgdi"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/3HsrmTrpK8RQzki6KaG4i7" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="3HsrmTrpK8RQzki6KaG4i7"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/6XDFHhnPcsR6XtGuraEL4o" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="6XDFHhnPcsR6XtGuraEL4o"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/0Ya7CwHr3AEyoyxFYYknIq" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="0Ya7CwHr3AEyoyxFYYknIq"></a>
+        <a class="spotify-card" href="https://open.spotify.com/track/2jxZGrS9fFxCyhuNPxjbyo" target="_blank" rel="noopener noreferrer" aria-label="Listen to this track on Spotify" data-track-id="2jxZGrS9fFxCyhuNPxjbyo"></a>
       </div>
     </section>
   </main>
