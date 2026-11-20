@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="sv">
 <head>
   <title>Mixing | Dist Studios</title>
@@ -10,9 +10,9 @@
     html, body { min-height: 100%; width: 100%; overflow-x: hidden; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; color: #fff; }
     .background-image { position: fixed; inset: -8px; background-image: url('./Dist%20Main.jpg'); background-size: cover; background-position: center; filter: blur(4px); z-index: 1; }
     .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; padding: 1.25rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
-    .brand { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Monoton', cursive; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: 0.15em; text-decoration: none; white-space: nowrap; }
+    .brand { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%); color: #fff; font-family: 'Monoton', cursive; font-size: clamp(1.5rem, 3vw, 2.25rem); letter-spacing: 0.15em; text-decoration: none; }
     .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); padding-top: 2.25rem; }
-    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
+    .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-decoration: none; text-transform: uppercase; }
     .tab:hover, .tab[aria-current="page"] { color: #fff; }
     .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
     .tab:focus-visible { outline: 2px solid #c9a879; outline-offset: 2px; }
@@ -29,16 +29,16 @@
   <header class="site-header">
     <a class="brand" href="./">Dist Studios</a>
     <nav class="tabs" aria-label="Dist Studios sections">
-      <a class="tab" href="./songs.html">Songs</a>
-      <a class="tab" href="./mixing.html">Mixing</a>
+      <a class="tab" href="./songs.html">Playlist</a>
+      <a class="tab" href="./mixing.html" aria-current="page">Mixing</a>
       <a class="tab" href="./about.html">About</a>
     </nav>
   </header>
   <main class="content">
-    <p>My name is Adam and I’m a professional mixing engineer and a part of Dist Studios. I’m mainly focused on band oriented mixing. Recorded drums, guitars and other instruments. I also have a long history of pop and EDM mixing as well. Whether you want a dirty indie rock mix or a clean modern metal mix, I’ve done it all.</p>
+    <p>My name is Adam and I’m a professional mixing engineer and a part of Dist Studios. I’m mainly focused on band oriented mixing. Recorded drums, guitars and other instruments. I also have a background in live sound and love the dynamics of live recordings.</p>
     <hr>
     <div class="spotify-container">
-      <iframe title="Spotify playlist of Adam Abrahamsson's mixes" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/16t9BBq8vsYZjPPbXMTUcy" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <iframe title="Spotify playlist of Adam Abrahamsson's mixes" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/16t9BBq8vsYZjPPbXMTUcy" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </main>
 </body>
