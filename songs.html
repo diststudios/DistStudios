@@ -10,7 +10,11 @@
     html, body { min-height: 100%; width: 100%; overflow-x: hidden; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; color: #fff; }
     .background-image { position: fixed; inset: -8px; background-image: url('./Dist%20Main.jpg'); background-size: cover; background-position: center; filter: blur(4px); z-index: 1; }
     .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; padding: 1.25rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
-    .brand { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%) skewX(-8deg); color: #fff; font-family: 'Monoton', cursive; font-size: clamp(1.5rem, 3vw, 2.25rem); font-style: italic; letter-spacing: 0.15em; text-decoration: none; white-space: nowrap; }
+    .brand { position: absolute; top: 0.8rem; left: 50%; transform: translateX(-50%) skewX(-8deg); color: #fff; font-family: 'Monoton', cursive; font-size: clamp(1.5rem, 3vw, 2.25rem); font-style: italic; text-decoration: none; white-space: nowrap; }
+    .instagram-link { position: absolute; top: 1.2rem; right: 1.25rem; display: grid; width: 30px; height: 30px; place-items: center; color: #fff; text-decoration: none; }
+    .instagram-link svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .instagram-link:hover { opacity: 0.75; }
+    .instagram-link:focus-visible { outline: 2px solid #c9a879; outline-offset: 4px; border-radius: 4px; }
     .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); padding-top: 2.25rem; }
     .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
     .tab:hover, .tab[aria-current="page"] { color: #fff; }
@@ -20,13 +24,16 @@
     h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1.25rem; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
     .spotify-container { width: 100%; max-width: 400px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); border-radius: 12px; overflow: hidden; }
     .spotify-container iframe { display: block; height: 500px; }
-    @media (max-width: 500px) { .site-header { padding-inline: 0.5rem; } .brand { font-size: 1.2rem; } .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
+    @media (max-width: 500px) { .site-header { padding-inline: 0.5rem; } .brand { font-size: 1.2rem; } .instagram-link { top: 1.25rem; right: 0.65rem; } .instagram-link svg { width: 21px; height: 21px; } .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
   </style>
 </head>
 <body>
   <div class="background-image" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="./">Dist Studios</a>
+    <a class="instagram-link" href="https://www.instagram.com/diststudion/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dist Studios on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"></rect><circle cx="12" cy="12" r="4.5"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>
+    </a>
     <nav class="tabs" aria-label="Dist Studios sections">
       <a class="tab" href="./songs.html" aria-current="page">Playlist</a>
       <a class="tab" href="./mixing.html">Mixing</a>
@@ -36,7 +43,7 @@
   <main class="content">
     <h2 style="font-size: clamp(1.8rem, 4vw, 3rem);">Featured Songs by Dist Studios</h2>
     <div class="spotify-container">
-      <iframe title="Spotify playlist of songs by Dist Studios" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5SUMZ0GDupjDi8vqt2UYIe?utm_source=generator&amp;si=b024c0350f124f3e" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe title="Spotify playlist of songs by Dist Studios" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5SUMZ0GDupjDi8vqt2UYIe?utm_source=generator&amp;si=b024c0350d894ab5" width="100%" height="500" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </main>
 </body>
