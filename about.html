@@ -5,14 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Source+Sans+3:wght@300;400;600&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { min-height: 100%; width: 100%; overflow-x: hidden; font-family: 'Source Sans 3', sans-serif; background-color: #14110f; color: #fff; }
     .background-image { position: fixed; inset: -8px; background-image: url('./Dist%20Main.jpg'); background-size: cover; background-position: center; filter: blur(4px); z-index: 1; }
     .site-header { position: fixed; z-index: 3; top: 0; right: 0; left: 0; padding: 1rem 1rem 0; text-align: center; background: rgba(20,17,15,0.82); backdrop-filter: blur(10px); }
-    .brand { position: absolute; top: 50%; left: 1rem; display: inline-flex; transform: translateY(-50%); }
-    .brand img { display: block; width: clamp(300px, 42vw, 480px); max-height: 132px; object-fit: contain; mix-blend-mode: screen; }
-    .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); }
+    .brand { position: absolute; top: 0.75rem; left: 1rem; color: #fff; font-family: 'Monoton', sans-serif; font-size: clamp(0.9rem, 1.8vw, 1.25rem); letter-spacing: 0.05em; text-decoration: underline; text-underline-offset: 0.15em; white-space: nowrap; }
+    .tabs { display: flex; justify-content: center; gap: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.25); padding-top: 2rem; }
     .tab { position: relative; display: inline-block; min-width: 110px; padding: 0.7rem 1rem 0.8rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; text-decoration: none; }
     .tab:hover, .tab[aria-current="page"] { color: #fff; }
     .tab[aria-current="page"]::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; background: #c9a879; content: ""; }
@@ -20,13 +19,13 @@
     .content { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 1.5rem 3rem; }
     h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 600; letter-spacing: 0.03em; margin-bottom: 1.25rem; text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
     p { font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 300; color: rgba(255,255,255,0.9); max-width: 680px; line-height: 1.6; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
-    @media (max-width: 500px) { .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } .brand { left: 0.5rem; } .brand img { width: 252px; } }
+    @media (max-width: 500px) { .site-header { padding-inline: 0.5rem; } .brand { left: 0.5rem; font-size: 0.85rem; } .tabs { gap: 0.15rem; } .tab { min-width: 0; flex: 1; padding-inline: 0.4rem; font-size: 0.8rem; } }
   </style>
 </head>
 <body>
   <div class="background-image" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="./"><img src="./Dist%20Logotype%201.0.jpg" alt="Dist Studios"></a>
+    <a class="brand" href="./">Dist Studios</a>
     <nav class="tabs" aria-label="Dist Studios sections">
       <a class="tab" href="./songs.html">Songs</a>
       <a class="tab" href="./mixing.html">Mixing</a>
